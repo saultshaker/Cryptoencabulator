@@ -1,0 +1,85 @@
+\documentclass[twoside,twocolumn,9pt]{article}
+\usepackage{graphicx}
+\usepackage{outline}
+\usepackage{pmgraph}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage[skip=2pt,font=scriptsize]{caption}
+%\usepackage{hyperref}
+
+\usepackage[normalem]{ulem}
+\usepackage{indentfirst}
+\usepackage{todonotes}
+\graphicspath{ {images/} }
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{gensymb}
+\usepackage[document]{ragged2e}
+
+% \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fancyhdr}
+
+% \usepackage[margin=40mm]{geometry}
+\usepackage{tikz}
+\usepackage{lipsum}
+
+
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+\def \yeet {-2mm}
+%----Gets rid of section numbers
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+
+%--------------------Make usable space all of page
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-.25in}
+\setlength{\headsep}{-.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9in}
+%--------------------Indention
+\setlength{\parindent}{1cm}
+
+
+\title{\textbf{The Cryptoencabulator}}
+\author{Saul Schaffer\mbox{*} \& Brian Bock\thanks{Special thanks to Dr. Jungho Kim of the Mechanical Engineering Dept. at University of Maryland, College Park}}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Overleaf}
+\fancyhead[RE,LO]{Guides and tutorials}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+ 
+ 
+ 
+% \renewcommand{\headrulewidth}{2pt}
+% \renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+
+
+\pagestyle{plain}
+\maketitle
+
+\input{tex/function.tex}
+\input{tex/operation.tex}
+\input{tex/technical_features.tex}
+\input{tex/accessories.tex}
+\input{tex/applications.tex}
+\input{tex/specification.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{bib/bibs}
+
+\end{document}
